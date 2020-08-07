@@ -1,0 +1,15 @@
+{% extends "base1.html" %}
+
+{% block content %}
+
+ <div class="jumbotron">
+ 	<h1>Your name {{name}} must satisfy these conditions</h1>
+ 	<ul>
+	{% for item in conditions %}
+	  <li><h2>{{item}}</h2></li>
+	{% endfor %}
+</ul>
+ 
+ </div>
+
+{% endblock %}

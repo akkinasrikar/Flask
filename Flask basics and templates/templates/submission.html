@@ -1,0 +1,21 @@
+{% extends "base1.html" %}
+
+{% block content %}
+
+ <div class="jumbotron">
+ 	<h1>Welcome to Auditions</h1>
+ 	<h2>Enter your name</h2>
+ 	<h2>!!!your name must satisfy these 3 conditions!!!</h2>
+ 	<ul>
+ 		<li><h2>Name must contain Lower case letter</h2></li>
+ 		<li><h2>Name must contain Upper case letter</h2></li>
+ 		<li><h2>Name must contain Number</h2></li>
+ 	</ul>
+ 	<form action="{{url_for('check')}}">
+ 		<h2><label for="name">Name:</label>
+ 		<input type="text" name="name">
+ 		<input type="submit"></h2>
+ 	</form>
+ </div>
+
+{% endblock %}

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<h1>{{ mylist }}</h1>
+<ul>
+	{% for item in mylist %}
+	{% if item%2==0 %}
+	  <li><h2>{{item}} is even number</h2></li>
+	{% else %}
+	  <li><h2>{{item}} is odd number</h2></li>
+	{% endif %}
+	{% endfor %}
+</ul>
+</body>
+</html>
