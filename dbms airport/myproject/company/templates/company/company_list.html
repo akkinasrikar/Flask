@@ -1,0 +1,23 @@
+{%extends "base.html" %}
+{% block content %}
+<div class="jumbotron">
+	<h1>List of all Assigned Pilots</h1>
+	<ul>
+		{% for comp in companies %}
+          <li>
+          	{{ comp.pilot_id}} is assigned to {{ comp.name }}
+          </li>
+		{% endfor %}
+	</ul>
+
+</div>
+<style>
+	.jumbotron
+	{
+		background-image:url("http://www.pixelstalk.net/wp-content/uploads/2016/04/Simple-wallpaper-HD-images-pictures.png");
+		height:870px;
+		color:white;
+	}
+	
+</style>
+{% endblock %}

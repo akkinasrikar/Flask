@@ -1,0 +1,15 @@
+{%extends "base.html" %}
+{% block content %}
+<div class="jumbotron">
+	<h1>here are the list of all Airports</h1>
+	<h6>ICAO-take off-landings-taxiway-runway-parking slots</h6>
+	<ul>
+		{% for airport in airports %}
+          <li>
+          	{{ airport }}
+          </li>
+		{% endfor %}
+	</ul>
+
+</div>
+{% endblock %}

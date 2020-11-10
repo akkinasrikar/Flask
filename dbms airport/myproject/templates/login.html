@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="login-back">
+<form method="post">
+  {{ form.hidden_tag() }}<br>
+  <div class="text-tag">{{ form.email.label }}</div> <div class="input-tag">{{ form.email }}</div>
+  <br>
+  <div class="text-tag">{{ form.password.label }}</div> <div class="input-tag">{{ form.password }}</div><br><br>
+  <div class="login-btn">{{ form.submit() }}</div>
+</form>
+</div>
+<style>
+  form
+  {
+    border:2px solid darkgray;
+    background-color:white;
+    width:550px;
+    height:350px;
+    border-radius: 10px;;
+    margin-left:680px;
+    margin-top:200px;
+    text-align: center;
+    opacity:0.89;
+  }
+  .login-back
+  {
+    height:900px;;
+    width:100%;
+    background-image:url('https://images.wallpaperscraft.com/image/architecture_structure_modern_architecture_122333_1920x1080.jpg');
+    border:2px solid grey;
+  }
+</style>
+{% endblock %}

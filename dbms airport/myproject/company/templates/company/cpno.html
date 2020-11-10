@@ -1,0 +1,21 @@
+{%extends "base.html" %}
+{% block content %}
+<div class="jumbotron">
+	<h1>How many pilots are there for a company?</h1>
+	<ul>
+		{% for comp,i in companies %}
+          <li>
+          	  {{ comp }} have {{ i }} Pilots
+          </li>
+		{% endfor %}
+	</ul>
+
+</div>
+<style>
+	.jumbotron
+	{
+		background-image: url('http://newpearltile.ca/wp-content/uploads/2018/07/32x32-M-GF-MDA80109-MARBLE-STONE-LIGHT-GREY-LIGHT-GREY-FULL-BODY-POLISHED-GLAZED.jpg');
+		height:870px;
+	}
+</style>
+{% endblock %}

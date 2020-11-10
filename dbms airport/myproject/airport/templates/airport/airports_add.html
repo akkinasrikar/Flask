@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="jumbotron">
+	<h1>Airports</h1>
+	<p>Get the Airports from Database</p>
+	<form method="post">
+		{{ form.submit() }}
+	</form>
+</div>
+<style>
+	.jumbotron
+	{
+		background-image: url('https://images2.alphacoders.com/546/546587.jpg');
+		text-align:center;
+		height:870px;
+	}
+	p
+	{
+		font-size:60px;
+	}
+	p,h1
+	{
+		color:white;
+		opacity:0.8;
+	}
+</style>
+{% endblock %}

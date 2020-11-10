@@ -1,0 +1,15 @@
+{%extends "base.html" %}
+{% block content %}
+<div class="jumbotron">
+	<h1>List of all Aircrafts</h1>
+	<h6>Call sign - model no - turn around count - to - from - emergency - altitide - pilot - diatance - crash - company - speed - delay</h6>
+	<ul>
+		{% for aicraft in aircrafts %}
+          <li>
+          	{{ aicraft }}
+          </li>
+		{% endfor %}
+	</ul>
+
+</div>
+{% endblock %}

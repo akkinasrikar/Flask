@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="register-back"></div>
+<form method="post">
+  {{ form.hidden_tag() }}<br><br>
+  <div class="reg-email">{{ form.email.label }} {{ form.email }}</div><br>
+  <div class="reg-usern">{{ form.username.label }} {{ form.username }}</div><br>
+  <div class="reg-pass">{{ form.password.label }} {{ form.password }}</div><br>
+  <div class="reg-conf">{{ form.pass_confirm.label }} {{ form.pass_confirm }}</div><br>
+  {{ form.submit() }}
+</form>
+</div>
+<style>
+   form
+  {
+    border:2px solid darkgray;
+    background-color:white;
+    width:550px;
+    height:350px;
+    border-radius: 10px;;
+    margin-left:680px;
+    margin-top:-700px;
+    text-align: center;
+    opacity:0.7;
+  }
+  .reg-usern
+  {
+    margin-left:-30px;
+  }
+  .reg-pass
+  {
+    margin-left:-25px;
+  }
+  .reg-conf
+  {
+    margin-left:-45px;
+  }
+  .register-back
+  {
+    height:900px;;
+    width:100%;
+    background-image:url('https://wallpapercave.com/wp/wp2001719.jpg');
+    border:2px solid grey;
+  }
+</style>
+{% endblock %}

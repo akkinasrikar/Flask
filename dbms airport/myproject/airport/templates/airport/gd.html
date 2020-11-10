@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="main">
+<div class="jumbotron">
+	<form method="post">
+		{{ form.hidden_tag() }}
+		{{ form.city.label }} {{ form.city()}}
+		{{ form.hidden_tag() }}
+		{{ form.name.label }} {{ form.name()}}
+		{{ form.submit() }}
+	</form>
+</div>
+</div>
+<style>
+	.jumbotron
+	{
+		border-radius: 150px;
+		text-align: center;
+		opacity:0.95;
+	}
+	.main
+	{
+		background-image: url('https://images.axios.com/Et4F_HH-HXOd3oA2UmtqJFl3SVk=/0x0:5464x3074/1920x1080/2019/01/24/1548288604479.jpg');
+		height:870px;
+	}
+</style>
+{% endblock %}

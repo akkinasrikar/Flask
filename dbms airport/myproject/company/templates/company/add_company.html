@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="jumbotron">
+	<h1>Pilot needs a Company</h1>
+	<p>Update the database with Company</p>
+	<br><br><form method="post">
+		{{ form.hidden_tag() }}
+		{{ form.name.label }} {{ form.name()}}
+		{{ form.hidden_tag() }}<br><br>
+		<div class="id">{{ form.id.label }} {{ form.id()}}</div>
+		<div class="submit">{{ form.submit() }}</div>
+	</form>
+</div>
+<style>
+	.jumbotron
+	{
+		background-image: url('https://flyjazz.ca/wp-content/uploads/2018/11/8106061.jpg');
+		height:870px;
+	}
+	h1,p
+	{
+		color:white;
+		opacity:0.9;
+		font-weight: 500;
+	}
+	h1
+	{
+		font-size: 50px;;
+	}
+	.id
+	{
+		margin-left:34px;
+	}
+	.submit
+	{
+		margin-top:40px;
+		margin-left:160px;
+	}
+</style>
+{% endblock %}

@@ -1,0 +1,15 @@
+{%extends "base.html" %}
+{% block content %}
+<div class="jumbotron">
+	<h6>Details</h6>
+	<h6>Call sign-model no-turn around count-to-from-emergency-altitide-pilot-diatance-crash-company-speed-delay</h6>
+	<ul>
+		{% for d in data %}
+          <li>
+          	{{ d }}
+          </li>
+		{% endfor %}
+	</ul>
+
+</div>
+{% endblock %}

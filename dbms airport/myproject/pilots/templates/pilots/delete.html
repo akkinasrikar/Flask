@@ -1,0 +1,24 @@
+{%extends "base.html" %}
+{% block content %}
+<div class="jumbotron">
+	<h1>A Pilot is flying?</h1>
+	<h2>Delete the pilot ID from the database</h2>
+	<form method="POST">
+		{{form.hidden_tag()}}
+		<p>{{form.id.label}}</p><br>{{form.id()}}
+		{{form.submit()}}
+	</form> 
+</div>
+<style>
+	.jumbotron
+	{
+		background-image:url('https://images.pexels.com/photos/714667/pexels-photo-714667.jpeg?cs=srgb&dl=air-aircraft-airplane-714667.jpg&fm=jpg');
+		height:400px;
+	}
+	form
+	{
+		margin-top:50px;
+	}
+
+</style>
+{% endblock %}

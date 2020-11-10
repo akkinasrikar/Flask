@@ -1,0 +1,23 @@
+{%extends "base.html" %}
+{% block content %}
+<div class="jumbotron">
+	<h1>List of all Pilots</h1>
+	<ul>
+		{% for pilot in pilots %}
+          <li>
+          	{{ pilot.id}} {{ pilot }}
+          </li>
+		{% endfor %}
+	</ul>
+
+</div>
+<style>
+	.jumbotron
+	{
+		background-image:url('https://w-dog.net/wallpapers/8/1/297546382309037/plane-airplane-sky-clouds-flight-wing-aircraft-wallpaper.jpg');
+		height:870px;
+		color:white;
+		opacity:0.7;
+	}
+</style>
+{% endblock %}

@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="main">
+<div class="jumbotron">
+	<form method="post">
+		{{ form.hidden_tag() }}
+		{{ form.sc.label }} {{ form.sc()}}
+		{{ form.hidden_tag() }}
+		{{ form.ds.label }} {{ form.ds()}}
+		{{ form.submit() }}
+	</form>
+</div>
+</div>
+<style>
+	.main
+	{
+		background-image: url('https://get.wallhere.com/photo/metropolitan-area-architecture-structure-urban-area-building-daylighting-airport-terminal-city-metropolis-shopping-mall-918210.jpg');
+		height:900px;
+	}
+	.jumbotron
+	{
+		border-radius: 200px;
+		text-align: center;
+		width:800px;
+		margin-left:500px;
+		opacity:0.9;
+	}
+</style>
+{% endblock %}

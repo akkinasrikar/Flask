@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="main">
+<div class="jumbotron">
+	<h1>Aircrafts</h1>
+	<p>Get the aircrafts from database</p>
+	<form method="post">
+		{{ form.no.label }} {{ form.no()}}
+		{{ form.submit() }}
+	</form>
+</div>
+</div>
+<style>
+	.main
+	{
+		background-image: url("https://hdwallpapers.move.pk/wp-content/uploads/2015/02/arab-emirates-plane-in-airport.jpg");
+		border:2px solid white;
+		height:900px;
+	}
+	.jumbotron
+	{
+		opacity:0.9;
+		height:240px;
+		border-radius: 150px;
+		text-align: center;
+	}
+</style>
+{% endblock %}

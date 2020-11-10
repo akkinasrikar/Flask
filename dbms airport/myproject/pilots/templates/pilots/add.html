@@ -1,0 +1,52 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="jumbotron">
+	<h1>Pilot needs to be fly</h1>
+	<h3>Add a Pilot to our Database<br>Pilot must be above age 20</h3>
+	<form method="post">
+		{{ form.hidden_tag() }}
+		{{ form.first_name.label }} {{ form.first_name()}}<br>
+		{{ form.last_name.label }} {{ form.last_name()}}<br>
+		<div class="age">{{ form.age.label }} {{ form.age()}}</div>
+		<div class="rank">{{ form.rank.label }} {{ form.rank()}}</div><br>
+		<div class="submit">{{ form.submit() }}</div>
+	</form>
+</div>
+<style>
+	.jumbotron
+	{
+		background-image: url('https://wallpaperstock.net/airbus-a380-lufthansa-wallpapers_45548_1920x1080.jpg');
+		height:870px;
+	}
+	h1
+	{
+		font-size: 50px;
+	}
+	h3
+	{
+		margin-left:90px;
+	}
+	h1,h3
+	{
+		color:white;
+		opacity:0.9;
+	}
+	form
+	{
+		margin-top:70px;
+	}
+	.age
+	{
+		margin-left:45px;
+	}
+	.rank
+	{
+		margin-left:37px;
+	}
+	.submit
+	{
+		margin-left:130px;
+		margin-top:40px;
+	}
+</style>
+{% endblock %}

@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="main">
+<div class="jumbotron">
+	
+	<form method="post">
+		{{ form.hidden_tag() }}
+		{{ form.s.label }} {{ form.s()}}
+		{{ form.submit() }}
+	</form>
+</div>
+</div>
+<style>
+	.jumbotron
+	{
+		border-radius: 150px;
+		text-align: center;
+		opacity:0.89
+	}
+	.main
+	{
+		background-image: url('https://www.pixelstalk.net/wp-content/uploads/2016/10/Aviation-Full-HD-Wallpaper-1920x1080.jpg');
+		height:900px;
+	}
+</style>
+{% endblock %}

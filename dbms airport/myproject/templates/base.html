@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<!-- CSS only -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+<!-- JS, Popper.js, and jQuery -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+</head>
+<style>
+	.btn{
+	      margin-left:170px;
+        width:130px;
+	    }
+  .btn:hover
+  {
+    transition-delay: 0.1s;
+  }
+  a{
+    color:black;
+    text-decoration: none;
+   
+    
+  }
+  .nav-link
+  {
+    margin-right:-20px;
+  }
+  a:hover
+  {
+    color:black;
+    text-decoration: none;
+   
+  }
+  .bar
+  {
+    border-radius: 4px;
+    margin: 2px 5px;
+    padding:3px 12px;
+    font-size: 22px;
+    color:white;
+    text-decoration:silver;
+  }
+  .bar:hover
+  {
+    background-color: lightgrey;
+    
+    margin: 0px 5px;
+    padding:18px 12px;
+    transition-duration: 0.1s;
+  }
+  .navbar
+  {
+    background-image:url("http://pavbca.com/walldb/original/3/5/c/608539.jpg");  
+    border:1px  grey;
+  }
+
+</style>
+<body>
+
+	<nav class="navbar navbar-expand-lg navbar-light bg-light">
+		<div class="navbar-nav">
+      <li class="nav-link"><a class="bar" href="{{url_for('welcome')}}"> Home </a></li>
+      {% if current_user.is_authenticated %}
+           <li class="nav-link"><a class="bar" href="{{ url_for('logout')}}"> Log Out </a></li>
+        {% else %}
+           <li class="nav-link"><a class="bar" href="{{ url_for('login')}}"> Login </a></li>
+           <li class="nav-link"><a class="bar" href="{{ url_for('register')}}"> Register </a></li>
+      {% endif %}
+
+
+		</div>
+
+ <div class="btn-group">
+  <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Pilot
+  </button>
+  <div class="dropdown-menu">
+  	<a class="nav-item nav-link" href="{{url_for('pilots.add')}}">Register pilot</a>
+  	<a class="nav-item nav-link" href="{{url_for('pilots.list')}}">Available pilots</a>
+  	<a class="nav-item nav-link" href="{{url_for('pilots.delete')}}">Remove pilot</a>
+    <a class="nav-item nav-link" href="{{url_for('pilots.exp')}}">Most Experienced pilots</a>
+
+
+  </div>
+</div>
+
+<div class="btn-group">
+  <button type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Company
+  </button>
+  <div class="dropdown-menu">
+	<a class="nav-item nav-link" href="{{url_for('company.cpno')}}">compnay details</a>
+	<a class="nav-item nav-link" href="{{url_for('company.add')}}">Assign Company</a>
+  <a class="nav-item nav-link" href="{{url_for('company.company_list')}}">Assigned pilots</a>
+  <a class="nav-item nav-link" href="{{url_for('company.ojpc')}}">inights</a>
+  <a class="nav-item nav-link" href="{{url_for('company.info')}}">info</a>
+  </div>
+</div>
+
+<div class="btn-group">
+  <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Aircraft
+  </button>
+  <div class="dropdown-menu">
+  	<a class="nav-item nav-link" href="{{url_for('aircraft.add')}}">Load Aircrafts</a>
+	<a class="nav-item nav-link" href="{{url_for('aircraft.aircrafts_list')}}">List Aircrafts</a>
+  <a class="nav-item nav-link" href="{{url_for('aircraft.aircrafts_det')}}">INFO</a>
+  <a class="nav-item nav-link" href="{{url_for('aircraft.aircrafts_speed')}}">Speed data</a>
+  </div>
+</div>
+
+<div class="btn-group">
+  <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Airport
+  </button>
+  <div class="dropdown-menu">
+    <a class="nav-item nav-link" href="{{url_for('airport.add')}}">Load Airports</a>
+  <a class="nav-item nav-link" href="{{url_for('airport.airports_list')}}">List Airports</a>
+  <a class="nav-item nav-link" href="{{url_for('airport.planes')}}">Planes</a>
+  </div>
+</div>
+
+	</nav>
+
+    {% block content %}
+
+    
+    {% endblock %}
+</body>
+</html>
